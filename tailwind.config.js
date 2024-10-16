@@ -1,11 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{html,js,jsx,ts,tsx}",  // Asegúrate de incluir todas las extensiones de archivo que Tailwind debe procesar
+    "./index.html",  // Incluir el archivo HTML principal si es necesario
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+  variants: {
+    extend:{
+      display:["focus-group"]
+    }
+  },
+};

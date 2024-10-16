@@ -17,6 +17,10 @@ export default [
         sourceType: 'module',
       },
     },
+    env: {
+      browser: true,
+      node: true,  // <-- Esta línea es la clave para permitir 'module'
+    },
     settings: { react: { version: '18.3' } },
     plugins: {
       react,
